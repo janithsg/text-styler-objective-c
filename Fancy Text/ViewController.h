@@ -11,11 +11,13 @@
 @interface ViewController : UIViewController {
     
     CGFloat fontSize;
+    BOOL shadowAdded;
     
 }
 
 @property (weak, nonatomic) IBOutlet UILabel *previewLbl;
 @property (weak, nonatomic) IBOutlet UITextField *inputTxt;
+@property (weak, nonatomic) IBOutlet UIButton *shadowBtn;
 
 - (IBAction)dismissKeyboard:(id)sender;
 - (IBAction)redBtn:(id)sender;

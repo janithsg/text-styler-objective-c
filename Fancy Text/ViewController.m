@@ -17,6 +17,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    shadowAdded = false;
+    fontSize = 33;
 }
 
 - (IBAction)dismissKeyboard:(id)sender {
@@ -53,6 +56,20 @@
 }
 
 - (IBAction)shadowBtn:(id)sender {
+    if (shadowAdded == true) {
+        self.previewLbl.layer.shadowOpacity = 0.0;
+        
+        shadowAdded = false;
+        [self.shadowBtn setTitle: @"Add Shadow" forState: UIControlStateNormal];
+    } else {
+        self.previewLbl.layer.shadowColor = [[UIColor blackColor] CGColor];
+        self.previewLbl.layer.shadowOpacity = 0.40;
+        self.previewLbl.layer.shadowRadius = 2.0f;
+        self.previewLbl.layer.shadowOffset = CGSizeMake(2, 2);
+        
+        shadowAdded = true;
+        [self.shadowBtn setTitle: @"Remove Shadow" forState: UIControlStateNormal];
+    }
 }
 
 - (IBAction)smallBtn:(id)sender {

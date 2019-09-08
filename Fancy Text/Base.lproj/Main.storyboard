@@ -230,6 +230,7 @@
                     <connections>
                         <outlet property="inputTxt" destination="Lfv-QM-8uo" id="5Bx-Y8-8Dp"/>
                         <outlet property="previewLbl" destination="QUG-sg-ti6" id="6Cm-dN-oez"/>
+                        <outlet property="shadowBtn" destination="S2b-SX-STI" id="EVh-EO-K6d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
